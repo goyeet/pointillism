@@ -1,11 +1,11 @@
 let img1;
 let img2;
 let increment, tileSize;
-let increments = [5, 10, 15];
+let increments = [5, 10, 15]; // tile size increments
 let currentIncrement = 0;
 
 function setup() {
-  createCanvas(750, 750); // Keep canvas size as it is
+  createCanvas(750, 750);
   increment = increments[currentIncrement];
   tileSize = increment;
   loadImages();
@@ -15,12 +15,12 @@ function loadImages() {
   img1 = loadImage("flower.png", function() {
     img1.resize(width / 2, height / 2); // Resize the original image
     img1.loadPixels(); // Load pixels of the resized original image
-    drawImage(img1, 0); // Draw flower image at the top
+    drawImage(img1, 0);
   });
   img2 = loadImage("kiwi.jpg", function() {
     img2.resize(width / 2, height / 2); // Resize the original image
     img2.loadPixels(); // Load pixels of the resized original image
-    drawImage(img2, height / 2); // Draw slug image at the bottom
+    drawImage(img2, height / 2);
   });
 }
 
@@ -47,7 +47,6 @@ function drawImage(img, yOffset) {
       // Set fill color based on pixel color
       fill(r, g, b);
       
-      // Draw a point at this pixel location
       ellipse(i + increment / 2, j + increment / 2, tileSize, tileSize);
     }
   }
