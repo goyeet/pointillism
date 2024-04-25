@@ -1,0 +1,30 @@
+html, body {
+  font-family: 'Courier';
+  margin: 0;
+  padding: 0;
+  background-color: #202020;
+  display: flex;
+  justify-content: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.text {
+  color: white;
+}
+
+canvas {
+  display: block;
+  border-radius: 20px;
+}
